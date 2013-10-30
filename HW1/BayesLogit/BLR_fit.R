@@ -1,4 +1,5 @@
-source("BLR_functions.R") # BLR_functions.R contains the Metropolis Hastings implementation
+# BLR_functions.R contains the Metropolis Hastings implementation
+source("BLR_functions.R")
 
 #~~~~~~ Determine which dataset to test ~~~~~~
 args<-commandArgs(TRUE)
@@ -32,10 +33,6 @@ X=as.matrix(dat[,3:ncol(dat)])
 
 res=bayes.logreg(m,y,X,beta.0,Sigma.0.inv)
 thetas=res$thetas
-
-# save sample set in file, with column names, but no row index
-#write.table(thetas, file="thetas.txt", row.names=FALSE, quote=FALSE)
-#write.table(res$acceptance, file=paste("acceptance_", datasetNum, ".txt", sep=''), row.names=FALSE, col.names=1:ncol(res$acceptance), quote=FALSE)
 
 # save quantiles of estimates
 quantiles1=quantile(thetas[,1],seq(.01,.99,.01)) 
