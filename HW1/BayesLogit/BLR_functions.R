@@ -34,7 +34,10 @@ proposal<-function(theta1, theta2)
 	invisible(dnorm(theta2, mean=theta1, sd=v))
 }
 
-# % Only useful for weird reasons.
+# % This returns the previously accepted theta with the j^th component changed
+# to a proposed value. ie. if previous theta = [a1, ..., ap] then this
+# returns theta.star = [a1, ..., a(j-1), aj.star, a(j+1), ...., ap].
+# This theta.star is then found to be accepted or not.
 thetat<-function(theta, j)
 {
 	temp=theta[1,]
