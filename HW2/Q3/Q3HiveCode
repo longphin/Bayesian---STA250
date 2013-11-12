@@ -1,0 +1,8 @@
+CREATE TABLE table1(groups SMALLINT, val FLOAT)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t';
+
+LOAD DATA LOCAL INPATH '/home/hadoop/groups.txt' OVERWRITE INTO TABLE table1;
+
+SELECT groups, avg(val), var_samp(val)
+FROM table1
+GROUP BY groups;
