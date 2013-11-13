@@ -19,14 +19,14 @@ for line in sys.stdin:
 		x = float(x)
 		y = float(y)
 	except ValueError:
-		# Conversion failed. Just ignore it, then.
+		# Conversion failed. Just ignore it like a crying baby, then.
 		continue
 
   # Since Hadoop sorts by key, we can take bins the be in order.
 	if x_lo < x <= x_hi and y_lo < y <= y_hi: # (x,y) is in current box
 		current_count += count
 	else: # update to a new box
-		if current_count > 0: # need this check so we don't accidentally print first line always
+		if current_count > 0: # need this check so we don't print the first x and y
 			print '%.1f,%.1f,%.1f,%.1f,%.0f' % (x_lo, x_hi, y_lo, y_hi, current_count)
 
     # A new box!
