@@ -1,0 +1,242 @@
+Working on HW4
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is ahead of 'origin/master' by 17 commits.
+#
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	modified:   GNUmakefile
+#	new file:   test_tn.R
+#	new file:   test_tn2.R
+#	new file:   tn.cu
+#	new file:   tn2.cu
+#
+# Changes not staged for commit:
+#   (use "git add/rm <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   ../HW1/BayesLogit/BLR_post_process.R
+#	modified:   ../HW1/BayesLogit/BLR_post_process.sh
+#	deleted:    ../HW1/BayesLogit/blr_fit.R
+#	deleted:    ../HW1/BayesLogit/blr_functions.R
+#	deleted:    ../HW1/BayesLogit/dump/README.md
+#	deleted:    ../HW1/BayesLogit/results/README.md
+#	deleted:    ../HW2/BLB/dump/Put_Stuff_Here.txt
+#	deleted:    ../HW2/BLB/output/Put_Stuff_Here.txt
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	../HW1/BayesLogit/Rplots.pdf
+#	../HW1/BayesLogit/breast/
+#	../HW1/BayesLogit/coverage_line_plot.pdf
+#	../HW1/BayesLogit/coverage_summaries.tex
+#	../HW1/BayesLogit/coverage_summaries.txt
+#	../HW1/BayesLogit/dump/blr_functions.R
+#	../HW1/BayesLogit/plots_breast.jpg
+#	../HW1/BayesLogit/results/blr_breast_medianAll.csv
+#	../HW1/BayesLogit/results/blr_res_1001.csv
+#	../HW1/BayesLogit/results/blr_res_1002.csv
+#	../HW1/BayesLogit/results/blr_res_1003.csv
+#	../HW1/BayesLogit/results/blr_res_1004.csv
+#	../HW1/BayesLogit/results/blr_res_1005.csv
+#	../HW1/BayesLogit/results/blr_res_1006.csv
+#	../HW1/BayesLogit/results/blr_res_1007.csv
+#	../HW1/BayesLogit/results/blr_res_1008.csv
+#	../HW1/BayesLogit/results/blr_res_1009.csv
+#	../HW1/BayesLogit/results/blr_res_1010.csv
+#	../HW1/BayesLogit/results/blr_res_1011.csv
+#	../HW1/BayesLogit/results/blr_res_1012.csv
+#	../HW1/BayesLogit/results/blr_res_1013.csv
+#	../HW1/BayesLogit/results/blr_res_1014.csv
+#	../HW1/BayesLogit/results/blr_res_1015.csv
+#	../HW1/BayesLogit/results/blr_res_1016.csv
+#	../HW1/BayesLogit/results/blr_res_1017.csv
+#	../HW1/BayesLogit/results/blr_res_1018.csv
+#	../HW1/BayesLogit/results/blr_res_1019.csv
+#	../HW1/BayesLogit/results/blr_res_1020.csv
+#	../HW1/BayesLogit/results/blr_res_1021.csv
+#	../HW1/BayesLogit/results/blr_res_1022.csv
+#	../HW1/BayesLogit/results/blr_res_1023.csv
+#	../HW1/BayesLogit/results/blr_res_1024.csv
+#	../HW1/BayesLogit/results/blr_res_1025.csv
+#	../HW1/BayesLogit/results/blr_res_1026.csv
+#	../HW1/BayesLogit/results/blr_res_1027.csv
+#	../HW1/BayesLogit/results/blr_res_1028.csv
+#	../HW1/BayesLogit/results/blr_res_1029.csv
+#	../HW1/BayesLogit/results/blr_res_1030.csv
+#	../HW1/BayesLogit/results/blr_res_1031.csv
+#	../HW1/BayesLogit/results/blr_res_1032.csv
+#	../HW1/BayesLogit/results/blr_res_1033.csv
+#	../HW1/BayesLogit/results/blr_res_1034.csv
+#	../HW1/BayesLogit/results/blr_res_1035.csv
+#	../HW1/BayesLogit/results/blr_res_1036.csv
+#	../HW1/BayesLogit/results/blr_res_1037.csv
+#	../HW1/BayesLogit/results/blr_res_1038.csv
+#	../HW1/BayesLogit/results/blr_res_1039.csv
+#	../HW1/BayesLogit/results/blr_res_1040.csv
+#	../HW1/BayesLogit/results/blr_res_1041.csv
+#	../HW1/BayesLogit/results/blr_res_1042.csv
+#	../HW1/BayesLogit/results/blr_res_1043.csv
+#	../HW1/BayesLogit/results/blr_res_1044.csv
+#	../HW1/BayesLogit/results/blr_res_1045.csv
+#	../HW1/BayesLogit/results/blr_res_1046.csv
+#	../HW1/BayesLogit/results/blr_res_1047.csv
+#	../HW1/BayesLogit/results/blr_res_1048.csv
+#	../HW1/BayesLogit/results/blr_res_1049.csv
+#	../HW1/BayesLogit/results/blr_res_1050.csv
+#	../HW1/BayesLogit/results/blr_res_1051.csv
+#	../HW1/BayesLogit/results/blr_res_1052.csv
+#	../HW1/BayesLogit/results/blr_res_1053.csv
+#	../HW1/BayesLogit/results/blr_res_1054.csv
+#	../HW1/BayesLogit/results/blr_res_1055.csv
+#	../HW1/BayesLogit/results/blr_res_1056.csv
+#	../HW1/BayesLogit/results/blr_res_1057.csv
+#	../HW1/BayesLogit/results/blr_res_1058.csv
+#	../HW1/BayesLogit/results/blr_res_1059.csv
+#	../HW1/BayesLogit/results/blr_res_1060.csv
+#	../HW1/BayesLogit/results/blr_res_1061.csv
+#	../HW1/BayesLogit/results/blr_res_1062.csv
+#	../HW1/BayesLogit/results/blr_res_1063.csv
+#	../HW1/BayesLogit/results/blr_res_1064.csv
+#	../HW1/BayesLogit/results/blr_res_1065.csv
+#	../HW1/BayesLogit/results/blr_res_1066.csv
+#	../HW1/BayesLogit/results/blr_res_1067.csv
+#	../HW1/BayesLogit/results/blr_res_1068.csv
+#	../HW1/BayesLogit/results/blr_res_1069.csv
+#	../HW1/BayesLogit/results/blr_res_1070.csv
+#	../HW1/BayesLogit/results/blr_res_1071.csv
+#	../HW1/BayesLogit/results/blr_res_1072.csv
+#	../HW1/BayesLogit/results/blr_res_1073.csv
+#	../HW1/BayesLogit/results/blr_res_1074.csv
+#	../HW1/BayesLogit/results/blr_res_1075.csv
+#	../HW1/BayesLogit/results/blr_res_1076.csv
+#	../HW1/BayesLogit/results/blr_res_1077.csv
+#	../HW1/BayesLogit/results/blr_res_1078.csv
+#	../HW1/BayesLogit/results/blr_res_1079.csv
+#	../HW1/BayesLogit/results/blr_res_1080.csv
+#	../HW1/BayesLogit/results/blr_res_1081.csv
+#	../HW1/BayesLogit/results/blr_res_1082.csv
+#	../HW1/BayesLogit/results/blr_res_1083.csv
+#	../HW1/BayesLogit/results/blr_res_1084.csv
+#	../HW1/BayesLogit/results/blr_res_1085.csv
+#	../HW1/BayesLogit/results/blr_res_1086.csv
+#	../HW1/BayesLogit/results/blr_res_1087.csv
+#	../HW1/BayesLogit/results/blr_res_1088.csv
+#	../HW1/BayesLogit/results/blr_res_1089.csv
+#	../HW1/BayesLogit/results/blr_res_1090.csv
+#	../HW1/BayesLogit/results/blr_res_1091.csv
+#	../HW1/BayesLogit/results/blr_res_1092.csv
+#	../HW1/BayesLogit/results/blr_res_1093.csv
+#	../HW1/BayesLogit/results/blr_res_1094.csv
+#	../HW1/BayesLogit/results/blr_res_1095.csv
+#	../HW1/BayesLogit/results/blr_res_1096.csv
+#	../HW1/BayesLogit/results/blr_res_1097.csv
+#	../HW1/BayesLogit/results/blr_res_1098.csv
+#	../HW1/BayesLogit/results/blr_res_1099.csv
+#	../HW1/BayesLogit/results/blr_res_1100.csv
+#	../HW1/BayesLogit/results/blr_res_1101.csv
+#	../HW1/BayesLogit/results/blr_res_1102.csv
+#	../HW1/BayesLogit/results/blr_res_1103.csv
+#	../HW1/BayesLogit/results/blr_res_1104.csv
+#	../HW1/BayesLogit/results/blr_res_1105.csv
+#	../HW1/BayesLogit/results/blr_res_1106.csv
+#	../HW1/BayesLogit/results/blr_res_1107.csv
+#	../HW1/BayesLogit/results/blr_res_1108.csv
+#	../HW1/BayesLogit/results/blr_res_1109.csv
+#	../HW1/BayesLogit/results/blr_res_1110.csv
+#	../HW1/BayesLogit/results/blr_res_1111.csv
+#	../HW1/BayesLogit/results/blr_res_1112.csv
+#	../HW1/BayesLogit/results/blr_res_1113.csv
+#	../HW1/BayesLogit/results/blr_res_1114.csv
+#	../HW1/BayesLogit/results/blr_res_1115.csv
+#	../HW1/BayesLogit/results/blr_res_1116.csv
+#	../HW1/BayesLogit/results/blr_res_1117.csv
+#	../HW1/BayesLogit/results/blr_res_1118.csv
+#	../HW1/BayesLogit/results/blr_res_1119.csv
+#	../HW1/BayesLogit/results/blr_res_1120.csv
+#	../HW1/BayesLogit/results/blr_res_1121.csv
+#	../HW1/BayesLogit/results/blr_res_1122.csv
+#	../HW1/BayesLogit/results/blr_res_1123.csv
+#	../HW1/BayesLogit/results/blr_res_1124.csv
+#	../HW1/BayesLogit/results/blr_res_1125.csv
+#	../HW1/BayesLogit/results/blr_res_1126.csv
+#	../HW1/BayesLogit/results/blr_res_1127.csv
+#	../HW1/BayesLogit/results/blr_res_1128.csv
+#	../HW1/BayesLogit/results/blr_res_1129.csv
+#	../HW1/BayesLogit/results/blr_res_1130.csv
+#	../HW1/BayesLogit/results/blr_res_1131.csv
+#	../HW1/BayesLogit/results/blr_res_1132.csv
+#	../HW1/BayesLogit/results/blr_res_1133.csv
+#	../HW1/BayesLogit/results/blr_res_1134.csv
+#	../HW1/BayesLogit/results/blr_res_1135.csv
+#	../HW1/BayesLogit/results/blr_res_1136.csv
+#	../HW1/BayesLogit/results/blr_res_1137.csv
+#	../HW1/BayesLogit/results/blr_res_1138.csv
+#	../HW1/BayesLogit/results/blr_res_1139.csv
+#	../HW1/BayesLogit/results/blr_res_1140.csv
+#	../HW1/BayesLogit/results/blr_res_1141.csv
+#	../HW1/BayesLogit/results/blr_res_1142.csv
+#	../HW1/BayesLogit/results/blr_res_1143.csv
+#	../HW1/BayesLogit/results/blr_res_1144.csv
+#	../HW1/BayesLogit/results/blr_res_1145.csv
+#	../HW1/BayesLogit/results/blr_res_1146.csv
+#	../HW1/BayesLogit/results/blr_res_1147.csv
+#	../HW1/BayesLogit/results/blr_res_1148.csv
+#	../HW1/BayesLogit/results/blr_res_1149.csv
+#	../HW1/BayesLogit/results/blr_res_1150.csv
+#	../HW1/BayesLogit/results/blr_res_1151.csv
+#	../HW1/BayesLogit/results/blr_res_1152.csv
+#	../HW1/BayesLogit/results/blr_res_1153.csv
+#	../HW1/BayesLogit/results/blr_res_1154.csv
+#	../HW1/BayesLogit/results/blr_res_1155.csv
+#	../HW1/BayesLogit/results/blr_res_1156.csv
+#	../HW1/BayesLogit/results/blr_res_1157.csv
+#	../HW1/BayesLogit/results/blr_res_1158.csv
+#	../HW1/BayesLogit/results/blr_res_1159.csv
+#	../HW1/BayesLogit/results/blr_res_1160.csv
+#	../HW1/BayesLogit/results/blr_res_1161.csv
+#	../HW1/BayesLogit/results/blr_res_1162.csv
+#	../HW1/BayesLogit/results/blr_res_1163.csv
+#	../HW1/BayesLogit/results/blr_res_1164.csv
+#	../HW1/BayesLogit/results/blr_res_1165.csv
+#	../HW1/BayesLogit/results/blr_res_1166.csv
+#	../HW1/BayesLogit/results/blr_res_1167.csv
+#	../HW1/BayesLogit/results/blr_res_1168.csv
+#	../HW1/BayesLogit/results/blr_res_1169.csv
+#	../HW1/BayesLogit/results/blr_res_1170.csv
+#	../HW1/BayesLogit/results/blr_res_1171.csv
+#	../HW1/BayesLogit/results/blr_res_1172.csv
+#	../HW1/BayesLogit/results/blr_res_1173.csv
+#	../HW1/BayesLogit/results/blr_res_1174.csv
+#	../HW1/BayesLogit/results/blr_res_1175.csv
+#	../HW1/BayesLogit/results/blr_res_1176.csv
+#	../HW1/BayesLogit/results/blr_res_1177.csv
+#	../HW1/BayesLogit/results/blr_res_1178.csv
+#	../HW1/BayesLogit/results/blr_res_1179.csv
+#	../HW1/BayesLogit/results/blr_res_1180.csv
+#	../HW1/BayesLogit/results/blr_res_1181.csv
+#	../HW1/BayesLogit/results/blr_res_1182.csv
+#	../HW1/BayesLogit/results/blr_res_1183.csv
+#	../HW1/BayesLogit/results/blr_res_1184.csv
+#	../HW1/BayesLogit/results/blr_res_1185.csv
+#	../HW1/BayesLogit/results/blr_res_1186.csv
+#	../HW1/BayesLogit/results/blr_res_1187.csv
+#	../HW1/BayesLogit/results/blr_res_1188.csv
+#	../HW1/BayesLogit/results/blr_res_1189.csv
+#	../HW1/BayesLogit/results/blr_res_1190.csv
+#	../HW1/BayesLogit/results/blr_res_1191.csv
+#	../HW1/BayesLogit/results/blr_res_1192.csv
+#	../HW1/BayesLogit/results/blr_res_1193.csv
+#	../HW1/BayesLogit/results/blr_res_1194.csv
+#	../HW1/BayesLogit/results/blr_res_1195.csv
+#	../HW1/BayesLogit/results/blr_res_1196.csv
+#	../HW1/BayesLogit/results/blr_res_1197.csv
+#	../HW1/BayesLogit/results/blr_res_1198.csv
+#	../HW1/BayesLogit/results/blr_res_1199.csv
+#	../HW1/BayesLogit/results/blr_res_1200.csv
+#	../HW1/BayesLogit/results/blr_res_breast.csv
+#	../HW1/BayesLogit/results/blr_res_breast_old.csv
+#	../HW2/BLB/BLB_Q1_part_ef.R
