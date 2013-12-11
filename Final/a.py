@@ -21,6 +21,7 @@ __author__ = 'Longphi Nguyen'
 
 from mrjob.job import MRJob
 from math import sqrt
+import time
 
 try:
     from itertools import combinations
@@ -37,7 +38,7 @@ class SemicolonValueProtocol(object):
         return key, values
 
 
-class MoviesSimilarities(MRJob):
+class Similarities(MRJob):
 
     OUTPUT_PROTOCOL = SemicolonValueProtocol
 
@@ -119,4 +120,6 @@ class MoviesSimilarities(MRJob):
             yield (item1_corr[0], item2), item1_corr[1]
 
 if __name__ == '__main__':
-    MoviesSimilarities.run()
+    t0=time.clock()
+    Similarities.run()
+    print time.clock()-t0

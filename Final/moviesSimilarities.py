@@ -6,6 +6,7 @@ from mrjob.job import MRJob
 from metrics import correlation
 from metrics import cosine, regularized_correlation
 from math import sqrt
+import time
 
 try:
     from itertools import combinations
@@ -91,8 +92,10 @@ class MoviesSimilarities(MRJob):
     def top_similar_items(self, key_sim, similar_ns):
         item_x, corr_sim, = key_sim
         for item_y, n in similar_ns:
-            yield None, (item_x, item_y, corr_sim, jaccard_sim, n)
+            yield None, (item_x, item_y, corr_sim, n)
 
 
 if __name__ == '__main__':
+    t0=time.clock()
     MoviesSimilarities.run()
+    print time.clock()-t0
